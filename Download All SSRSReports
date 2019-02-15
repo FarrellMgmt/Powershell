@@ -1,4 +1,6 @@
 #------------------------------------------------------
+#Found on stack overflow https://stackoverflow.com/questions/46783093/download-all-ssrs-reports
+#Reference to https://github.com/Microsoft/ReportingServicesTools
 #Prerequisites
 #Install-Module -Name ReportingServicesTools
 #------------------------------------------------------
