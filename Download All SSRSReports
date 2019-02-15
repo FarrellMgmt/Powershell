@@ -1,0 +1,15 @@
+#------------------------------------------------------
+#Prerequisites
+#Install-Module -Name ReportingServicesTools
+#------------------------------------------------------
+
+#Lets get security on all folders in a single instance
+#------------------------------------------------------
+#Declare SSRS URI
+$sourceRsUri = 'http://epicorServer/ReportServer_instanceOptional/'
+
+#Declare Proxy so we dont need to connect with every command
+$proxy = New-RsWebServiceProxy -ReportServerUri $sourceRsUri
+
+#Output ALL Catalog items to file system
+Out-RsFolderContent -Proxy $proxy -RsFolder / -Destination '\\networkFileLocation\SSRS_Out' -Recurse
